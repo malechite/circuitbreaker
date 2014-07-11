@@ -1,5 +1,6 @@
 body {
     background-color: #555555;
+    font-family:arial, sans-serif;
 }
 
 #container {
@@ -17,6 +18,7 @@ body {
 }
 
 #board .square {
+    position:relative;
     width:71px;
     height:71px;
     float:left;
@@ -28,4 +30,24 @@ body {
 
 #board .square:hover {
     background-color:#777777;
+}
+
+#board .square .coords {
+    position:absolute;
+    display:block;
+    color:#666666;
+    top:2px;
+    left:2px;
+    font-size:10px;
+}
+
+#board .square.teleport .icon {
+    position:absolute;
+    display:block;
+    width:20px;
+    height:20px;
+    font-size:50px;
+    color:#888888;
+    top:25px;
+    left:25px;
 }

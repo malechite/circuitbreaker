@@ -43,6 +43,10 @@ Game.interface = Koi.define({
                 $square.attr('id','square-' + count);
                 $square.attr('data-x', x);
                 $square.attr('data-y', y);
+                $square.find('.coords').html(x + ', ' + y);
+                if($.inArray(count,[0,10,110,120]) >= 0) {
+                    $square.addClass('teleport').append('<span class="icon">*</span>');
+                }
                 $board.append($square);
                 count++;
             }
