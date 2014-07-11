@@ -7,6 +7,11 @@ body {
     position:relative;
 }
 
+title {
+    font-color: #000000;
+    font-family:arial, sans-serif;
+}
+
 #board {
     position:absolute;
     top:50px;
