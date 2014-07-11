@@ -7,7 +7,7 @@ body {
     position:relative;
 }
 
-title {
+#title {
     font-color: #000000;
     font-family:arial, sans-serif;
 }
