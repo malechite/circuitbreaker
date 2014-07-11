@@ -1,0 +1,31 @@
+body {
+    background-color: #555555;
+}
+
+#container {
+    width:100%;
+}
+
+#board {
+    background-color: #000000;
+    width:792px;
+    height:792px;
+    border-width:1px 0 0 1px;
+    border-style:solid;
+    border-color:#777777;
+    margin:50px auto;
+}
+
+#board .square {
+    width:71px;
+    height:71px;
+    float:left;
+    border-width:0 1px 1px 0;
+    border-style:solid;
+    border-color:#777777;
+    cursor:pointer;
+}
+
+#board .square:hover {
+    background-color:#777777;
+}
