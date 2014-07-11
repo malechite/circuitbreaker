@@ -3,8 +3,41 @@ Koi.namespace('Game');
 
 window.game = {
     templates: {},
-    interface: false
+    interface: false,
+    patterns: false
 };
+
+Game.patterns = Koi.define({
+    list: [
+        ['green','yellow','PLAYER','purple','green'],
+        ['orange','blue','blue','PLAYER','green'],
+        ['PLAYER','green','yellow','blue','purple'],
+        ['orange','blue','purple','green','PLAYER'],
+        ['blue','PLAYER','yellow','orange','orange'],
+        ['orange','yellow','PLAYER','green','blue'],
+        ['PLAYER','purple','orange','green','purple'],
+        ['green','purple','orange','PLAYER','yellow'],
+        ['yellow','purple','yellow','blue','PLAYER'],
+        ['blue','PLAYER','orange','purple','green']
+    ],
+
+    in_use: [],
+
+    fetch: function() {
+        var pattern = Math.floor(Math.random() * this.list.length);
+        if($.inArray(pattern, this.in_use) < 0) {
+            this.in_use.push(pattern);
+            console.log('pattern: ', pattern)
+            return pattern;    
+        } else if(this.in_use.length < this.list.length) {
+            this.fetch();
+        } else {
+            this.in_use = [];
+            this.fetch();
+        }
+        
+    }
+});
 
 Game.interface = Koi.define({
 
@@ -56,5 +89,6 @@ Game.interface = Koi.define({
 });
 
 $(document).ready(function() {
-    game.interface = new Game.interface()
+    game.interface = new Game.interface();
+    game.patterns = new Game.patterns();
 });

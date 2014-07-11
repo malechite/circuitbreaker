@@ -4,23 +4,25 @@ body {
 }
 
 #container {
-    width:100%;
+    position:relative;
 }
 
 #board {
+    position:absolute;
+    top:50px;
+    left:50px;
     background-color: #000000;
-    width:792px;
-    height:792px;
+    width:572px;
+    height:572px;
     border-width:1px 0 0 1px;
     border-style:solid;
     border-color:#777777;
-    margin:50px auto;
 }
 
 #board .square {
     position:relative;
-    width:71px;
-    height:71px;
+    width:51px;
+    height:51px;
     float:left;
     border-width:0 1px 1px 0;
     border-style:solid;
@@ -48,6 +50,16 @@ body {
     height:20px;
     font-size:50px;
     color:#888888;
-    top:25px;
-    left:25px;
+    top:15px;
+    left:15px;
+}
+
+#pattern {
+    position:absolute;
+    width:300px;
+    height:100px;
+    background-color:#ffffff;
+    border:1px solid #777777;
+    top:50px;
+    left:642px;
 }
