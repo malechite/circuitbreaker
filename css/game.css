@@ -65,13 +65,80 @@ body {
     left:642px;
 }
 
+#pattern ul {
+    height:100px;
+}
+
+#pattern ul li {
+    display:block;
+    width:30px;
+    height:30px;
+    float:left;
+    margin:20px 0 0 20px;
+}
+
 #inventory {
     position:absolute;
     width:300px;
-    height:100px;
+    height:400px;
     color:#000000;
     background-color:#ffffff;
     border:1px solid #777777;
-    top:50px;
+    top:200px;
     left:642px;
 }
+
+#inventory ul li {
+    display:block;
+    width:33px;
+    height:33px;
+    float:left;
+    margin:20px 0 0 20px;
+    padding:20px;
+    font-size:30px;
+    font-family: 'arial black', sans-serif;
+    text-align:center;
+}
+
+#inventory .roll {
+    position: absolute;
+    width:180px;
+    height:30px;
+    text-align:center;
+    color:#ffffff;
+    background-color: #b20206;
+    padding:10px;
+    bottom:10px;
+    right:50px;
+    font-size:30px;
+    cursor: pointer;
+}
+
+#inventory .roll:hover {
+    background-color: #c33a3d;
+}
+
+#inventory .roll.inactive {
+    background-color:#888888;
+    cursor: default;
+}
+
+#inventory .actions {
+    position: absolute;
+    top:200px;
+    width:240px;
+    background-color: #bbbbbb;
+    margin:20px;
+    height:30px;
+    padding:10px;
+}
+
+li.blue    { background-color:#19d5ff;}
+li.orange  { background-color:#ffaf19;}
+li.purple  { background-color:#c50ceb;}
+li.green   { background-color:#16bf00;}
+li.yellow  { background-color:#fff719;}
+li.player  { background-color:#b20206;}
+li.blocker { background-color:#000000; color:#ffffff;}
+
+

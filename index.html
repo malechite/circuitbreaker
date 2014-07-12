@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/game.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/koi-0.4.1.js"></script>
+    <script src="js/interface.js"></script>
+    <script src="js/patterns.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
@@ -16,7 +18,22 @@
             <span class="title">Pattern:</span>
             <ul></ul>
         </div>
-        <div id="inventory"></div>
+        <div id="inventory">
+            <span class="title">Inventory:</span>
+            <ul>
+                <li class="blue">0</li> 
+                <li class="orange">0</li>
+                <li class="purple">0</li>
+                <li class="green">0</li>
+                <li class="yellow">0</li>
+                <li class="blocker">0</li>
+            </ul>
+            <div class="actions">
+                <span class='title'>Actions:</span>
+                <span class="count">0</span>
+            </div>
+            <a class="roll">Roll</a>
+        </div>
     </div>
     <div id="templates">
         <div class="template square" data-template="square"><span class="coords"></span></div>
