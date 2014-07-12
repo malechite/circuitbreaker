@@ -125,10 +125,15 @@ body {
 
 #pattern ul li {
     display:block;
-    width:30px;
-    height:30px;
+    width:33px;
+    height:33px;
     float:left;
+	border-radius: 10px/20px;
+	border: 1px solid grey;
     margin:20px 0 0 20px;
+	font-size:10px;
+    font-family: 'arial black', sans-serif;
+    text-align:center;
 }
 
 #inventory {
@@ -203,6 +208,8 @@ body {
     width:33px;
     height:33px;
     float:left;
+	border-radius: 10px/20px;
+	border: 1px solid grey;
     margin:20px 0 0 20px;
     padding:20px;
     font-size:30px;
@@ -212,14 +219,16 @@ body {
 
 #inventory .roll {
     position: absolute;
-    width:180px;
+    width:60px;
     height:30px;
+	border-radius: 10px 0px 0px 10px;
+	border: 1px solid grey;
     text-align:center;
     color:#ffffff;
     background-color: #b20206;
-    padding:10px;
-    bottom:10px;
-    right:50px;
+	padding:10px;
+	bottom: 74px;
+	right:198px;
     font-size:30px;
     cursor: pointer;
 }
@@ -237,11 +246,43 @@ body {
 #inventory .actions {
     position: absolute;
     top:200px;
-    width:240px;
+    width:180px;
+	border-radius: 0px 10px 10px 0px;
+	border: 1px solid grey;
     background-color: #bbbbbb;
     margin:20px;
     height:30px;
     padding:10px;
+	right:0px;
+	font-size:20px;
+    font-family: 'arial black', sans-serif;
+    text-align:center;
+}
+
+#inventory .endturn {
+    position: absolute;
+    width:240px;
+    height:12px;
+	border-radius: 10px/20px;
+	border: 1px solid grey;
+    text-align:center;
+    color:#ffffff;
+    background-color: #B3B000;
+    padding:10px;
+    bottom:15px;
+	right:20px;
+    font-size:15px;
+    cursor: pointer;
+}
+
+#inventory .endturn:hover {
+    background-color: #F0EC00;
+}
+
+#inventory .endturn.inactive {
+    background-color:#888888;
+    cursor: default;
+    opacity:.5;
 }
 
 li.blue    { background-color:#19d5ff;}
