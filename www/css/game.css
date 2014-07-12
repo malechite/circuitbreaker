@@ -114,6 +114,7 @@ body {
     height:100px;
     color:#000000;
     background-color:#ffffff;
+	border-radius: 10px 10px 0px 0px;
     border:1px solid #777777;
     top:50px;
     left:642px;
@@ -142,6 +143,7 @@ body {
     height:346px;
     color:#000000;
     background-color:#ffffff;
+	border-radius: 0px 0px 10px 10px;
     border:1px solid #777777;
     top:160px;
     left:642px;
