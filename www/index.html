@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <title>Circuit//Breaker</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/game.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/koi-0.4.1.js"></script>
+    <script src="js/interface.js"></script>
+    <script src="js/patterns.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/dice.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/socket.io.js"></script>
+    <script>
+      var socket = io();
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="roll-results">
+            <div class="actions">You have <span class="count">0</span> actions</div>
+            <div class="choose"></div>
+            <div class="okay inactive">Okay</div>
+        </div>
+        <div id="board"></div>
+        <div id="pattern">
+            <span class="title">Pattern:</span>
+            <ul></ul>
+        </div>
+        <div id="inventory">
+            <span class="title">Inventory:</span>
+            <ul>
+                <li class="blue">0</li> 
+                <li class="orange">0</li>
+                <li class="purple">0</li>
+                <li class="green">0</li>
+                <li class="yellow">0</li>
+                <li class="blocker">0</li>
+            </ul>
+            <div class="actions">
+                <span class='title'>Actions:</span>
+                <span class="count">0</span>
+            </div>
+            <a class="roll">Roll</a>
+        </div>
+    </div>
+    <div id="chat">
+        <ul class="messages"></ul>
+        <form action="">
+            <input type="text" />
+            <button>Send</button>
+        </form>
+    </div>
+    <div id="templates">
+        <div class="template square" data-template="square"><span class="coords"></span></div>
+    </div>
+</body>
+</html>

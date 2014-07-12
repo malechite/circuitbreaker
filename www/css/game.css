@@ -1,0 +1,255 @@
+body {
+    background-color: #555555;
+    font-family:arial, sans-serif;
+}
+
+.clear {
+    clear:both;
+}
+
+#container {
+    position:relative;
+}
+
+#board {
+    position:absolute;
+    top:50px;
+    left:50px;
+    background-color: #000000;
+    width:572px;
+    height:572px;
+    border-width:1px 0 0 1px;
+    border-style:solid;
+    border-color:#777777;
+}
+
+#roll-results {
+    display:none;
+    position:absolute;
+    top:50px;
+    left:50px;
+    background-color: rgba(255,255,255,.8);
+    width:572px;
+    height:572px;
+    border:1px solid #ff0000;
+    z-index:10;
+}
+
+#roll-results .actions {
+    text-align: center;
+    padding:20px;
+    font-size:30px;
+}
+
+#roll-results .actions .count {
+    color:#ff0000;
+}
+
+#roll-results .choose {
+    text-align: center;
+    font-size:20px;
+    padding:20px;
+}
+
+#roll-results .okay {
+    cursor:pointer;
+    padding:20px;
+    font-size:20px;
+    color:#ffffff;
+    background-color: rgba(0,0,255,.7);
+    position: absolute;
+    bottom:20px;
+    right:20px;
+    border:2px solid #000000;
+}
+
+#roll-results .okay:hover {
+    background-color: rgba(0,0,255,1);
+}
+
+#roll-results .okay.inactive {
+    border:2px solid #ffffff;
+    background-color: rgba(150,150,150,.5) !important;
+    cursor:default !important;
+}
+
+#board .square {
+    position:relative;
+    width:51px;
+    height:51px;
+    float:left;
+    border-width:0 1px 1px 0;
+    border-style:solid;
+    border-color:#777777;
+    cursor:pointer;
+}
+
+#board .square:hover {
+    background-color:#777777;
+}
+
+#board .square .coords {
+    position:absolute;
+    display:block;
+    color:#666666;
+    top:2px;
+    left:2px;
+    font-size:10px;
+}
+
+#board .square.teleport .icon {
+    position:absolute;
+    display:block;
+    width:20px;
+    height:20px;
+    font-size:50px;
+    color:#888888;
+    top:15px;
+    left:15px;
+}
+
+#pattern {
+    position:absolute;
+    width:300px;
+    height:100px;
+    color:#000000;
+    background-color:#ffffff;
+    border:1px solid #777777;
+    top:50px;
+    left:642px;
+}
+
+#pattern ul {
+    height:100px;
+}
+
+#pattern ul li {
+    display:block;
+    width:30px;
+    height:30px;
+    float:left;
+    margin:20px 0 0 20px;
+}
+
+#inventory {
+    position:absolute;
+    width:300px;
+    height:346px;
+    color:#000000;
+    background-color:#ffffff;
+    border:1px solid #777777;
+    top:160px;
+    left:642px;
+}
+
+#chat {
+    position:absolute;
+    width:300px;
+    height:200px;
+    color:#000000;
+    background-color:#ffffff;
+    border:1px solid #777777;
+    top:520px;
+    left:642px;
+    padding-bottom:30px;
+}
+
+#chat .messages {
+    height:200px;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+#chat form {
+    position:absolute;
+    width:300px;
+    border-top:1px solid #000000;
+    bottom:0;
+    left:0;
+    height:30px;
+}
+
+#chat form input {
+    width:230px;
+    margin:0;
+    height:22px;
+    padding:2px;
+}
+
+#roll-results ul.options {
+    clear:both;
+    margin:20px;
+    border:2px solid #ffffff;
+    height:116px;
+    width:208px;
+    opacity:.8;
+    cursor:pointer;
+}
+
+#roll-results ul.options:hover {
+    border:2px solid #ff0000;
+    opacity:1;
+}
+
+#roll-results ul.options.active,
+#roll-results ul.options.active:hover {
+    border:2px solid #0000ff;
+    opacity:1;
+}
+
+#roll-results ul.options li,
+#inventory ul li {
+    display:block;
+    width:33px;
+    height:33px;
+    float:left;
+    margin:20px 0 0 20px;
+    padding:20px;
+    font-size:30px;
+    font-family: 'arial black', sans-serif;
+    text-align:center;
+}
+
+#inventory .roll {
+    position: absolute;
+    width:180px;
+    height:30px;
+    text-align:center;
+    color:#ffffff;
+    background-color: #b20206;
+    padding:10px;
+    bottom:10px;
+    right:50px;
+    font-size:30px;
+    cursor: pointer;
+}
+
+#inventory .roll:hover {
+    background-color: #c33a3d;
+}
+
+#inventory .roll.inactive {
+    background-color:#888888;
+    cursor: default;
+    opacity:.5;
+}
+
+#inventory .actions {
+    position: absolute;
+    top:200px;
+    width:240px;
+    background-color: #bbbbbb;
+    margin:20px;
+    height:30px;
+    padding:10px;
+}
+
+li.blue    { background-color:#19d5ff;}
+li.orange  { background-color:#ffaf19;}
+li.purple  { background-color:#c50ceb;}
+li.green   { background-color:#16bf00;}
+li.yellow  { background-color:#fff719;}
+li.player  { background-color:#b20206;}
+li.blocker { background-color:#000000; color:#ffffff;}
+
+
