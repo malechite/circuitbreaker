@@ -6,7 +6,9 @@ window.game = {
     dom: {},
     main: false,
     interface: false,
-    patterns: false
+    patterns: false,
+    dice: false,
+    players: [false, false]
 };
 
 Game.main = Koi.define({
@@ -22,5 +24,8 @@ Game.main = Koi.define({
 $(document).ready(function() {
     game.interface = new Game.interface();
     game.patterns = new Game.patterns();
+    game.dice = new Game.dice();
     game.main = new Game.main();
+    game.players[0] = new Game.player();
+    game.players[1] = new Game.player();
 });

@@ -3,6 +3,10 @@ body {
     font-family:arial, sans-serif;
 }
 
+.clear {
+    clear:both;
+}
+
 #container {
     position:relative;
 }
@@ -17,6 +21,56 @@ body {
     border-width:1px 0 0 1px;
     border-style:solid;
     border-color:#777777;
+}
+
+#roll-results {
+    display:none;
+    position:absolute;
+    top:50px;
+    left:50px;
+    background-color: rgba(255,255,255,.8);
+    width:572px;
+    height:572px;
+    border:1px solid #ff0000;
+    z-index:10;
+}
+
+#roll-results .actions {
+    text-align: center;
+    padding:20px;
+    font-size:30px;
+}
+
+#roll-results .actions .count {
+    color:#ff0000;
+}
+
+#roll-results .choose {
+    text-align: center;
+    font-size:20px;
+    padding:20px;
+}
+
+#roll-results .okay {
+    cursor:pointer;
+    padding:20px;
+    font-size:20px;
+    color:#ffffff;
+    background-color: rgba(0,0,255,.7);
+    position: absolute;
+    bottom:20px;
+    right:20px;
+    border:2px solid #000000;
+}
+
+#roll-results .okay:hover {
+    background-color: rgba(0,0,255,1);
+}
+
+#roll-results .okay.inactive {
+    border:2px solid #ffffff;
+    background-color: rgba(150,150,150,.5) !important;
+    cursor:default !important;
 }
 
 #board .square {
@@ -88,6 +142,28 @@ body {
     left:642px;
 }
 
+#roll-results ul.options {
+    clear:both;
+    margin:20px;
+    border:2px solid #ffffff;
+    height:116px;
+    width:208px;
+    opacity:.8;
+    cursor:pointer;
+}
+
+#roll-results ul.options:hover {
+    border:2px solid #ff0000;
+    opacity:1;
+}
+
+#roll-results ul.options.active,
+#roll-results ul.options.active:hover {
+    border:2px solid #0000ff;
+    opacity:1;
+}
+
+#roll-results ul.options li,
 #inventory ul li {
     display:block;
     width:33px;
@@ -121,6 +197,7 @@ body {
 #inventory .roll.inactive {
     background-color:#888888;
     cursor: default;
+    opacity:.5;
 }
 
 #inventory .actions {
