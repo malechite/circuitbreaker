@@ -129,6 +129,7 @@ body {
     width:33px;
     height:33px;
     float:left;
+	box-shadow: 0px 0px 10px #888888;
 	border-radius: 10px/20px;
 	border: 1px solid grey;
     margin:20px 0 0 20px;
@@ -210,6 +211,7 @@ body {
     width:33px;
     height:33px;
     float:left;
+	box-shadow: 0px 0px 10px #888888;
 	border-radius: 10px/20px;
 	border: 1px solid grey;
     margin:20px 0 0 20px;
@@ -248,7 +250,7 @@ body {
 #inventory .actions {
     position: absolute;
     top:200px;
-    width:180px;
+    width:157px;
 	border-radius: 0px 10px 10px 0px;
 	border: 1px solid grey;
     background-color: #bbbbbb;
@@ -287,12 +289,12 @@ body {
     opacity:.5;
 }
 
-li.blue    { background-color:#19d5ff;}
-li.orange  { background-color:#ffaf19;}
-li.purple  { background-color:#c50ceb;}
-li.green   { background-color:#16bf00;}
-li.yellow  { background-color:#fff719;}
-li.player  { background-color:#b20206;}
+li.blue    { background:radial-gradient(#19d5ff , #18A5C4);}
+li.orange  { background:radial-gradient(#ffaf19 , #D49115);}
+li.purple  { background:radial-gradient(#c50ceb , #9C0BBA);}
+li.green   { background:radial-gradient(#16bf00 , #108F00);}
+li.yellow  { background:radial-gradient(#fff719 , #DED716);}
+li.player  { background:radial-gradient(#b20206 , #910306);}
 li.blocker { background-color:#000000; color:#ffffff;}
 
 
